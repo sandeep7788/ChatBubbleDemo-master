@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <!--   Root container of Floating Widget View  -->
+    <RelativeLayout
+        android:id="@+id/root_container"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+        <!--  View while view is collapsed  -->
+
+        <RelativeLayout
+            android:id="@+id/collapse_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:visibility="gone">
+
+            <!--   ImageView of floating widget  -->
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/collapsed_iv"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/round_themed"
+                android:elevation="10dp"
+                android:src="@drawable/img_logo"
+                tools:ignore="ContentDescription"
+                tools:targetApi="lollipop" />
+
+            <!--   Close button to close Floating Widget View  -->
+            <android.support.v7.widget.AppCompatImageView
+                android:id="@+id/close_floating_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/circle_shape"
+                android:elevation="15dp"
+                app:srcCompat="@drawable/ic_close_white"
+                tools:ignore="ContentDescription"
+                tools:targetApi="lollipop" />
+        </RelativeLayout>
+
+        <!--   View while view is expanded   -->
+        <android.support.constraint.ConstraintLayout
+            android:id="@+id/expanded_container"
+            android:layout_width="200dp"
+            android:layout_height="100dp"
+            android:background="@android:color/white"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:visibility="visible"
+            tools:visibility="visible">
+
+
+            <android.support.v7.widget.AppCompatImageButton
+                android:id="@+id/imageView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/round_themed"
+                android:elevation="10dp"
+                app:layout_constraintBottom_toBottomOf="@+id/banner_ad"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@+id/banner_ad"
+                app:layout_constraintTop_toTopOf="@+id/banner_ad"
+                app:srcCompat="@drawable/ic_close"
+                tools:targetApi="lollipop" />
+
+
+        </android.support.constraint.ConstraintLayout>
+    </RelativeLayout>
+</FrameLayout>

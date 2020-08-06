@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "99622720217",
+    "firebase_url": "https://floating-192820.firebaseio.com",
+    "project_id": "youtube-floating-192820",
+    "storage_bucket": "youtube-floating-192820.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:99622720217:android:68419821c7c82d5d",
+        "android_client_info": {
+          "package_name": "com.aariz.youtubefloating"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "99622720217-u6781o777kufvejt3l92mofkie1r7k62.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB2lGA2EgMEIFG7BXFTUaY7wSasciCX914"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

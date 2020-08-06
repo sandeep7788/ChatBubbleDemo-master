@@ -1,0 +1,38 @@
+apply plugin: 'com.android.application'
+def APK_NAME = "Floater"
+android {
+    compileSdkVersion 27
+    buildToolsVersion "27.0.3"
+    defaultConfig {
+        applicationId "com.aariz.youtubefloating"
+        minSdkVersion 19
+        targetSdkVersion 27
+        versionCode 1
+        versionName "1.0"
+        android.defaultConfig.vectorDrawables.useSupportLibrary = true
+    }
+    buildTypes {
+        release {
+            minifyEnabled true
+            shrinkResources true
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    android.applicationVariants.all { variant ->
+        variant.outputs.all {
+            def date = new Date()
+            def formattedDate = date.format('dd_MM_yy')
+            outputFileName = "${APK_NAME}-${variant.name}-${formattedDate}.apk"
+        }
+    }
+}
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:support-v4:27.1.1'
+    /*implementation("com.google.firebase:firebase-ads:12.0.1") {
+        exclude group: 'com.android.support', module: 'support-v4'
+    }*/
+    implementation "com.android.support.constraint:constraint-layout:1.1.0-beta6"
+}
